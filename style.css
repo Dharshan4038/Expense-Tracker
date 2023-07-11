@@ -117,7 +117,7 @@ hr {
     max-width: 100%;
 }
 
-.budget-cal form {
+#options-form {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
@@ -126,16 +126,23 @@ hr {
     margin-bottom: 100px;
 }
 
+#expForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .description {
     width: 40vw;
     height: 40px;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .value {
     width: 10vw;
     height: 40px;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 button {
@@ -152,6 +159,11 @@ button:hover {
     transform: scale(1.05);
 }
 
+.result-container {
+    height: 350px;
+    overflow: auto;
+}
+
 .result-container .result {
     width: auto;
     justify-content: space-between;
@@ -160,21 +172,14 @@ button:hover {
 .result {
     display:grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap:20px;
-    overflow:hidden;
+    
     border-bottom:1px solid black;
     position:relative;
     text-align:center;
+    margin-bottom: 8px;
 }
 
-.result:after {
-    content:'';
-    position:absolute;
-    border-bottom:1px solid black;
-    top:-20px;left:0;
-    height:1px;
-    width:1000%;
-}
+
 
 .trash-btn {
     color: red;
@@ -193,3 +198,19 @@ button:hover {
     transform: scale(1.1);
 }
 
+@media (max-width: 920px) {
+    button {
+        margin-top: 10px;
+        border: none;
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .result-container {
+        height: 300px;
+    }
+}
