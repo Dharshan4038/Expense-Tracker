@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="budget-container">
+                <div class="budget-head">
+                    <h2>Your Balance</h2>
+                    <h4 id="date"></h4>
+                    <p class="amount">Rs: <span class="amount-span">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="budget-cal-container">
+            <div class="cal-container">
+                <div class="budget-cal">
+                    <h1>Track Your Budget</h1>
+                    <form id="options-form">
+                        <select name="dropdown" id="dropdown" onchange="selectVal()">
+                            <option value="Expense-type" id="type">Expense Type</option>
+                            <option value="Savings">Savings</option>
+                            <option value="Expense">Expense</option>
+                        </select>  
+                    </form>
+                    <p id="etype">Tracking</p>
+                    <hr>
+                    <form id="expForm" onsubmit="return false">
+                        <input type="text" name="description" placeholder="Description" class="description" id="description">
+                        <input type="number" name="value" placeholder="Value" class="value" id="value">
+                        <button id="expense-btn"><i class="fa fa-check"></i></button>
+                    </form>
+                </div>
+                <div class="result-container">
+                    <!-- <div class= "result">
+                        <p>24/02/2021</p>
+                        <p>Home</p>
+                        <p>Rs:1000</p>
+                        <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

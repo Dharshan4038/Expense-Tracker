@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh; 
+}
+
+
+.container {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container .budget-container {
+    background-color: skyblue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.container .budget-container .budget-head {
+    margin-top: 172px;
+    margin-left: 20px;
+    line-height: 2rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.amount {
+    display: inline-block;
+    max-width: 170px;
+    width: inherit;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: white;
+    color: green;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.budget-cal-container {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+    padding-left: 40px;
+    padding-right: 30px;
+    background-color: beige;
+    min-width: 200px;
+}
+
+.budget-cal-container .cal-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.budget-cal-container .cal-container .budget-cal {
+    margin-top: 125px;
+    line-height: 2rem;
+}
+
+select {
+    margin-top: 15px;
+    margin-bottom: -60px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+select > option {
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    color: black;
+}
+
+hr {
+    margin-top: 0px;
+    color: black;
+    background-color: black;
+    height: 1px;
+    border: none;
+    max-width: 100%;
+}
+
+.budget-cal form {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    line-height: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.description {
+    width: 40vw;
+    height: 40px;
+    font-size: 16px;
+}
+
+.value {
+    width: 10vw;
+    height: 40px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    color: black;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+button:hover {
+    transition: all ease-in-out;
+    transform: scale(1.05);
+}
+
+.result-container .result {
+    width: auto;
+    justify-content: space-between;
+}
+
+.result {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+    overflow:hidden;
+    border-bottom:1px solid black;
+    position:relative;
+    text-align:center;
+}
+
+.result:after {
+    content:'';
+    position:absolute;
+    border-bottom:1px solid black;
+    top:-20px;left:0;
+    height:1px;
+    width:1000%;
+}
+
+.trash-btn {
+    color: red;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    transition: all ease-in-out;
+    transform: scale(1.05);
+    font-size: 20px;
+    margin: 0px;
+    height: 25px;
+}
+
+.fa-trash:hover {
+    transition: ease-out;
+    transform: scale(1.1);
+}
+
